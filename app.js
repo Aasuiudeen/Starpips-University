@@ -19,3 +19,19 @@ buttons.forEach((button) => {
     icon.classList.toggle("rotate");
   });
 });
+
+//Scroll interation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("m-blur");
+    } else {
+      entry.target.classList.remove("m-blur");
+    }
+  });
+});
+const hiddenElement = document.querySelectorAll(".m-hidden");
+const jagoElement = document.querySelectorAll(".ogah");
+hiddenElement.forEach((el) => observer.observe(el));
+jagoElement.forEach((el) => observer.observe(el));

@@ -45,6 +45,7 @@ body {
   background: var(--bg, #050605);
   font-family: var(--font-family);
   color: var(--white);
+  user-select: none;
 }
 p {
   /* margin-bottom: 1rem; */
@@ -237,6 +238,19 @@ img:not(.logo, .test) {
   border-radius: 100%;
   flex-shrink: 0;
 }
+.vector-2-4 {
+  background-color: rgba(136, 183, 2, 0.8);
+  width: 180px;
+  height: 180px;
+  display: block;
+  filter: blur(150px);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  border-radius: 100%;
+  flex-shrink: 0;
+  transform: translateX(-50%);
+}
 .header-btn {
   width: 100%;
 }
@@ -292,7 +306,8 @@ img:not(.logo, .test) {
 .client-center,
 .faq-center,
 .advert-center,
-.contact-center {
+.contact-center,
+.start-center {
   padding: 0 0 140px 0;
 }
 @media screen and (min-width: 920px) {
