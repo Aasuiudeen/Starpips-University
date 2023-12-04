@@ -1,0 +1,330 @@
+:root {
+  /* Color */
+  --primary: #88b702;
+  --bg: #050605;
+  --white: #ffffff;
+  --white-btn: rgb(255, 255, 255), 10%;
+  --white-02: #fafafa;
+  --white-03: #f8f9ff;
+  --slack: #000000;
+  --text-color-1: #222;
+  --text-color-2: #666666;
+  --text-color-3: #aaaaaa;
+  --text-color-4: #323233;
+  --red-light: #f8d7da;
+  --red-dark: #000000;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  /* rest of the variables */
+  --border-radius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: all 0.4s linear;
+  --maxWidth: 1170px;
+  --fixedWidth: 600px;
+  --font-family: "DM Sans", sans-serif;
+
+  /* Box shadow */
+  /* --boxShadow:box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --boxShadow-sm:box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --boxShadow-md:box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --boxshadow-lg:box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); */
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+} /*16px*/
+body {
+  background: var(--bg, #050605);
+  font-family: var(--font-family);
+  color: var(--white);
+}
+p {
+  /* margin-bottom: 1rem; */
+  font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /* margin: 3rem 0 1.38rem; */
+  font-family: var(--font-family);
+  font-weight: bolder;
+  /* line-height: 1.3; */
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  /* font-size: 3.052rem; */
+}
+
+/* h2 {font-size: 2.441rem;} */
+
+/* h3 {font-size: 1.953rem;} */
+
+/* h4 {font-size: 1.563rem;} */
+
+/* h5 {font-size: 1.25rem;} */
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img:not(.logo, .test) {
+  width: 100%;
+  display: block;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.hamburger {
+  width: 32px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  place-items: center;
+  z-index: 999;
+}
+
+.h-top,
+.h-middle,
+.h-buttom {
+  width: 32px;
+  height: 1px;
+  background: var(--white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all linear 0.25s;
+  transform: rotate(0deg);
+}
+
+.h-middle {
+  transform: translateY(9px);
+}
+.h-buttom {
+  transform: translateY(18px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+.open .h-top {
+  transform: rotate(45deg) translateY(0px) translateX(0px);
+}
+.open .h-middle {
+  visibility: hidden;
+}
+.open .h-buttom {
+  transform: rotate(-45deg) translateY(0px) translateX(0px);
+}
+
+.m-btn {
+  background-color: var(--primary);
+  cursor: pointer;
+  color: var(--white);
+  border: transparent;
+  border-radius: 80px;
+  padding: 16px 24px;
+  transition: var(--transition);
+  width: auto;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 16px;
+}
+.s-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  color: var(--white);
+  border: transparent;
+  border-radius: 80px;
+  padding: 16px 24px;
+  transition: var(--transition);
+  width: auto;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  display: block;
+}
+.vector {
+  width: 180px;
+  height: 180px;
+  background-color: var(--primary);
+  display: block;
+  filter: blur(150px);
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  border-radius: 100%;
+}
+.vector-1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 180px;
+  height: 180px;
+  display: block;
+  filter: blur(150px);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.vector-2 {
+  background-color: rgba(136, 183, 2, 0.8);
+  width: 180px;
+  height: 180px;
+  display: block;
+  filter: blur(150px);
+  position: absolute;
+  top: 80%;
+  right: 0%;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+.vector-2-2 {
+  background-color: rgba(136, 183, 2, 0.7);
+  width: 180px;
+  height: 180px;
+  display: block;
+  filter: blur(120px);
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+.vector-2-3 {
+  background-color: rgba(136, 183, 2, 0.7);
+  width: 180px;
+  height: 180px;
+  display: block;
+  filter: blur(120px);
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+.header-btn {
+  width: 100%;
+}
+.advert-btn {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 16px 32px;
+  border-radius: 80px;
+  width: auto;
+}
+.advert-btn a {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: capitalize;
+}
+.advert-btn i {
+  font-size: 16px;
+}
+.advert-center {
+  position: relative;
+}
+.advert-body {
+  background: var(--green-grey, rgba(255, 255, 255, 0.1));
+  border-left: 48px solid var(--primary);
+  border-right: 4px solid var(--primary);
+  width: 100%;
+  padding: 24px;
+  position: relative;
+}
+.advert-body-p {
+  background-color: var(--primary);
+  color: var(--white, #fff);
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.gen-btn {
+  width: 100%;
+  margin-top: 48px;
+}
+
+.form-btn {
+  width: 100%;
+}
+
+.service-section,
+.price-center,
+.client-center,
+.faq-center,
+.advert-center,
+.contact-center {
+  padding: 0 0 140px 0;
+}
+@media screen and (min-width: 920px) {
+  .s-btn {
+    width: auto;
+    margin-top: 0px;
+  }
+  .m-btn {
+    width: auto;
+    margin-bottom: 0px;
+  }
+  .advert-body {
+    background: var(--green-grey, rgba(255, 255, 255, 0.1));
+    border-left: 48px solid var(--primary);
+    border-right: 4px solid var(--primary);
+    width: 100%;
+    padding: 24px;
+  }
+  .advert-btn-b0dy {
+    display: flex;
+    justify-content: space-around;
+  }
+  .advert-body-p {
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+  .advert-center {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+  }
+  .form-btn {
+    width: auto;
+  }
+}
