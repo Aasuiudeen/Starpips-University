@@ -91,7 +91,7 @@ ul {
   padding: 0;
 }
 
-img:not(.logo, .test, .mission-img) {
+img:not(.logo, .test) {
   width: 100%;
   display: block;
 }
@@ -307,12 +307,7 @@ img:not(.logo, .test, .mission-img) {
 .faq-center,
 .advert-center,
 .contact-center,
-.start-center,
-.about-header-center,
-.drives-center,
-.mission-center,
-.timeline-center,
-.team-center {
+.start-center {
   padding: 0 0 140px 0;
 }
 @media screen and (min-width: 920px) {
