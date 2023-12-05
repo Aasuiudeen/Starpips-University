@@ -20,18 +20,55 @@ buttons.forEach((button) => {
   });
 });
 
+// Client scroll
+
+const carousel = document.querySelector(".client-card-holder");
+arrowIcon = document.querySelector(".client-title-icon i");
+firstCard = document.querySelectorAll(".client-card")[0];
+
+let isDragstart = false,
+  prevPageX,
+  prevScrollLeft;
+let firstCardWidth = firstCard.clientWidth + 14;
+
+// arrowIcon.forEach((icon) => {
+//   icon.addEventListener("click", () => {
+//     carousel.scrollLeft += icon.id == "left" ? -firstCardWidth : firstCardWidth;
+//   });
+// });
+
+const dragStart = (e) => {
+  isDragstart = true;
+  prevPageX = e.pageX;
+  prevScrollLeft = carousel.scrollLeft;
+};
+const dragging = (e) => {
+  if (!isDragstart) {
+    return;
+  }
+  e.preventDefault();
+  let positionDiff = e.pageX - prevPageX;
+  carousel.scrollLeft = prevScrollLeft - positionDiff;
+};
+const dragStop = () => {
+  isDragstart = false;
+};
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("mouseup", dragStop);
+
 //Scroll interation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("m-blur");
-    } else {
-      entry.target.classList.remove("m-blur");
-    }
-  });
-});
-const hiddenElement = document.querySelectorAll(".m-hidden");
-const jagoElement = document.querySelectorAll(".ogah");
-hiddenElement.forEach((el) => observer.observe(el));
-jagoElement.forEach((el) => observer.observe(el));
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("m-blur");
+//     } else {
+//       entry.target.classList.remove("m-blur");
+//     }
+//   });
+// });
+// const hiddenElement = document.querySelectorAll(".m-hidden");
+// const jagoElement = document.querySelectorAll(".ogah");
+// hiddenElement.forEach((el) => observer.observe(el));
+// jagoElement.forEach((el) => observer.observe(el));
