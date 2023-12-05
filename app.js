@@ -38,6 +38,20 @@ rightIcon.addEventListener("click", () => {
   carousel.scrollLeft -= 900;
 });
 
+const leftIcon2 = document.getElementById("right-2");
+const rightIcon2 = document.getElementById("left-2");
+
+leftIcon2.addEventListener("click", () => {
+  carousel.scrollLeft += 900;
+  carousel.style.scrollBehavior = "smooth";
+});
+
+rightIcon2.addEventListener("click", () => {
+  carousel.style.scrollBehavior = "smooth";
+  carousel.scrollLeft -= 900;
+});
+
+// NICe
 let isDragstart = false,
   prevPageX,
   prevScrollLeft;
