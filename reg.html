@@ -22,21 +22,13 @@
     />
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      href="./images/starpips sanserif black 1.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="nav-bar section-center">
       <div class="logo">
-        <img
-          src="./images/starpips sanserif black 1.png"
-          alt="logo"
-          class="logo"
-        />
+        <img src="./images/DYNAMICFOREXBLACK.png" alt="logo" class="logo" />
       </div>
       <!-- <span class="nav-line"></span> -->
       <ul class="nav-ul">
@@ -102,23 +94,29 @@
           <option value="">Signal</option>
           <option value="">Mentosrship</option>
         </select>
-        <button class="m-btn form-btn">Submit</button>
+        <button class="m-btn form-btn" id="f-submit">Submit</button>
       </form>
     </section>
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
+    <!-- Successful page -->
+    <section class="Success-section">
+      <div class="success-container">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
 
-    <dotlottie-player
-      src="https://lottie.host/2c15185d-f22f-484b-8559-b9b90c01c15a/NGHeBaM6S0.json"
-      background="transparent"
-      speed="1"
-      style="width: 300px; height: 300px"
-      loop
-      autoplay
-    ></dotlottie-player>
-
+        <dotlottie-player
+          src="https://lottie.host/2c15185d-f22f-484b-8559-b9b90c01c15a/NGHeBaM6S0.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <h1 class="Success-h1">Submitted Successful</h1>
+      </div>
+    </section>
+    <!-- End of successful -->
     <!-- Script Files -->
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
     <script

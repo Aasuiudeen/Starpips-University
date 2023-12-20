@@ -104,24 +104,35 @@ jagoElement.forEach((el) => observer.observe(el));
 
 // Send Email
 
-const form = document.getElementById("form");
+// const form = document.getElementById("form");
 
-function sendEmail() {
-  Email.send({
-    Host: "smtp.yahoo.com",
-    Username: "aasuiudeen@yahoo.com",
-    Password: "Khadija018",
-    To: "aasuiudeen@gmail.com",
-    From: document.getElementById("user-email").value,
-    Subject: "A New User Registered",
-    Body:
-      "Name: " +
-      document.getElementById("user-name").value +
-      "<br> Email: " +
-      document.getElementById("user-email").value +
-      "<br> Phone Number: " +
-      document.getElementById("user-phone").value +
-      "<br> Services: " +
-      document.getElementById("user-select").value,
-  }).then((message) => alert("Thank You, Surely get back to via Email."));
-}
+// function sendEmail() {
+//   Email.send({
+//     Host: "smtp.yahoo.com",
+//     Username: "aasuiudeen@yahoo.com",
+//     Password: "Khadija018",
+//     To: "aasuiudeen@gmail.com",
+//     From: document.getElementById("user-email").value,
+//     Subject: "A New User Registered",
+//     Body:
+//       "Name: " +
+//       document.getElementById("user-name").value +
+//       "<br> Email: " +
+//       document.getElementById("user-email").value +
+//       "<br> Phone Number: " +
+//       document.getElementById("user-phone").value +
+//       "<br> Services: " +
+//       document.getElementById("user-select").value,
+//   }).then((message) => summe());
+// }
+
+// Form Submition
+
+const formSubmit = document.getElementById("f-submit");
+const sSection = document.querySelector("Success-section");
+
+formSubmit.addEventListener("click", () => {
+  sSection.classList.add("open-success");
+});
+
+// alert("Thank You, Surely get back to via Email.")

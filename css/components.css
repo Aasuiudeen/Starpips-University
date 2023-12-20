@@ -308,8 +308,16 @@ img:not(.logo, .test) {
   transform: translateX(-50%);
   z-index: -1;
 }
-
-.service-section,
+.Success-section {
+  position: absolute;
+  top: 0;
+  left: 50;
+}
+.reg-center {
+  position: relative;
+  background-color: red;
+}
+.sucess .service-section,
 .price-center,
 .client-center,
 .faq-center,
