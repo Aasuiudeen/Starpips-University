@@ -106,10 +106,6 @@ jagoElement.forEach((el) => observer.observe(el));
 
 const form = document.getElementById("form");
 
-form.addEventListener("submit", () => {
-  console.log("Yes");
-});
-
 function sendEmail() {
   Email.send({
     Host: "smtp.yahoo.com",
