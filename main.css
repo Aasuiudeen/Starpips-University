@@ -191,28 +191,6 @@
 .service-header {
   margin-bottom: 40px;
 }
-.service-header h3 {
-  /* color: var(--white, #fff);
-  font-family: DM Sans;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 36px;
-  max-width: 300px; */
-  text-align: center;
-  margin-top: 0;
-  font-size: 32px;
-  font-weight: 500;
-}
-.service-header p {
-  color: var(--white, #fff);
-  /* Mobile/body 1 */
-  font-family: DM Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-}
 .s-card-svg {
   background-color: var(--primary);
   padding: 16px;

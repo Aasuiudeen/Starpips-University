@@ -301,6 +301,13 @@ img:not(.logo, .test) {
   width: 100%;
 }
 
+.header-animation {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  transform: translateX(-50%);
+}
+
 .service-section,
 .price-center,
 .client-center,
