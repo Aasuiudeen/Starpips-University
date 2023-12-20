@@ -197,7 +197,7 @@ img:not(.logo, .test, .mission-img) {
   transform: translateX(-50%);
   background-color: red;
 }
-.Success-section {
+.success-section {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -342,14 +342,14 @@ img:not(.logo, .test, .mission-img) {
 .advert-center,
 .contact-center,
 .start-center,
-.about-header-center,
 .drives-center,
 .mission-center,
 .timeline-center,
 .team-center {
   padding: 0 0 140px 0;
 }
-.pricing-center .reg-center {
+.pricing-center,
+.reg-center {
   padding: 0 0 140px 0;
 }
 .reg-center {

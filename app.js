@@ -128,11 +128,4 @@ jagoElement.forEach((el) => observer.observe(el));
 
 // Form Submition
 
-const formSubmit = document.getElementById("f-submit");
-const sSection = document.querySelector("Success-section");
-
-formSubmit.addEventListener("click", () => {
-  sSection.classList.add("open-success");
-});
-
-// alert("Thank You, Surely get back to via Email.")
+alert("Thank You, Surely get back to via Email.");
