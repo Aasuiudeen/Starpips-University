@@ -306,6 +306,7 @@ img:not(.logo, .test) {
   top: 60%;
   left: 20%;
   transform: translateX(-50%);
+  z-index: -1;
 }
 
 .service-section,
