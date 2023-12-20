@@ -184,9 +184,17 @@ img:not(.logo, .test, .mission-img) {
   display: block;
   filter: blur(150px);
   position: absolute;
-  top: 40%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 100%;
+  z-index: -99;
+}
+.header-animation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .vector-1 {
   background-color: rgba(255, 255, 255, 0.5);
@@ -314,6 +322,14 @@ img:not(.logo, .test, .mission-img) {
 .timeline-center,
 .team-center {
   padding: 0 0 140px 0;
+}
+.pricing-center .reg-center {
+  padding: 0 0 140px 0;
+}
+.reg-center {
+  align-items: center;
+  display: grid;
+  height: 100vh;
 }
 @media screen and (min-width: 920px) {
   .s-btn {

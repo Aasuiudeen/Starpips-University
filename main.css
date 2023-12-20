@@ -669,11 +669,11 @@ ul {
   width: 100%;
   overflow: hidden;
 }
-/* .m-hidden {
+.m-hidden {
   opacity: 0;
   transition: all 1.3s;
   filter: blur(1px);
-} */
+}
 .m-blur {
   opacity: 1;
   filter: blur(0px);

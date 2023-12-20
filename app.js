@@ -25,30 +25,30 @@ buttons.forEach((button) => {
 const carousel = document.querySelector(".client-card-holder");
 // arrowIcon = document.querySelector(".client-title-icon i");
 firstCard = document.querySelectorAll(".client-card")[0];
-const leftIcon = document.getElementById("right");
+const leftIcon = document.querySelector("#right");
 const rightIcon = document.getElementById("left");
 
-leftIcon.addEventListener("click", () => {
-  carousel.scrollLeft += 900;
-  carousel.style.scrollBehavior = "smooth";
+leftIcon.addEventListener("click", function (event) {
+  event.scrollLeft += 360;
+  event.style.scrollBehavior = "smooth";
 });
 
 rightIcon.addEventListener("click", () => {
   carousel.style.scrollBehavior = "smooth";
-  carousel.scrollLeft -= 900;
+  carousel.scrollLeft -= 360;
 });
 
 const leftIcon2 = document.getElementById("right-2");
 const rightIcon2 = document.getElementById("left-2");
 
 leftIcon2.addEventListener("click", () => {
-  carousel.scrollLeft += 900;
+  carousel.scrollLeft += 360;
   carousel.style.scrollBehavior = "smooth";
 });
 
 rightIcon2.addEventListener("click", () => {
   carousel.style.scrollBehavior = "smooth";
-  carousel.scrollLeft -= 900;
+  carousel.scrollLeft -= 360;
 });
 
 // NICe
@@ -86,18 +86,46 @@ carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 
-//Scroll interation
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("m-blur");
-//     } else {
-//       entry.target.classList.remove("m-blur");
-//     }
-//   });
-// });
-// const hiddenElement = document.querySelectorAll(".m-hidden");
-// const jagoElement = document.querySelectorAll(".ogah");
-// hiddenElement.forEach((el) => observer.observe(el));
-// jagoElement.forEach((el) => observer.observe(el));
+// Scroll interation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("m-blur");
+    } else {
+      entry.target.classList.remove("m-blur");
+    }
+  });
+});
+const hiddenElement = document.querySelectorAll(".m-hidden");
+const jagoElement = document.querySelectorAll(".ogah");
+hiddenElement.forEach((el) => observer.observe(el));
+jagoElement.forEach((el) => observer.observe(el));
+
+// Send Email
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", () => {
+  console.log("Yes");
+});
+
+function sendEmail() {
+  Email.send({
+    Host: "smtp.yahoo.com",
+    Username: "aasuiudeen@yahoo.com",
+    Password: "Khadija018",
+    To: "aasuiudeen@gmail.com",
+    From: document.getElementById("user-email").value,
+    Subject: "A New User Registered",
+    Body:
+      "Name: " +
+      document.getElementById("user-name").value +
+      "<br> Email: " +
+      document.getElementById("user-email").value +
+      "<br> Phone Number: " +
+      document.getElementById("user-phone").value +
+      "<br> Services: " +
+      document.getElementById("user-select").value,
+  }).then((message) => alert("Thank You, Surely get back to via Email."));
+}
