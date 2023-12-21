@@ -128,4 +128,4 @@ jagoElement.forEach((el) => observer.observe(el));
 
 // Form Submition
 
-alert("Thank You, Surely get back to via Email.");
+// alert("Thank You, Surely get back to via Email.");
