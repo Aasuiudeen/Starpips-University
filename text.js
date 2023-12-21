@@ -8,6 +8,11 @@ formSubmit.addEventListener("click", () => {
 // Send Email
 
 const form = document.getElementById("form");
+form.addEventListener("click", () => {
+  sendEmail();
+  reset();
+  return false;
+});
 
 function sendEmail() {
   Email.send({
