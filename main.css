@@ -683,6 +683,10 @@ ul {
 .client-card-3 {
   opacity: 0.2;
 }
+.client-card-2,
+.client-card-3 {
+  opacity: 1;
+}
 .client-title-icon {
   visibility: hidden;
   height: 0;

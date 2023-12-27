@@ -103,6 +103,10 @@
   padding: 30px;
   background-color: var(--green-grey, rgba(255, 255, 255, 0.1));
   border-radius: 40px;
+  transition: var(--transition);
+}
+.p-card:hover {
+  transform: scale(1.02);
 }
 .p-card-btn {
   display: flex;
@@ -687,6 +691,10 @@ ul {
 .client-card-3 {
   opacity: 0.2;
 }
+/* .client-card-2,
+.client-card-3 {
+  opacity: 1;
+} */
 .client-title-icon {
   visibility: hidden;
   height: 0;
